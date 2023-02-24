@@ -1,0 +1,20 @@
+<h1 class="mt-3"><%= @restaurant.name %></h1>
+
+<div class="mt-3">
+  <p>Address: <%= @restaurant.address %></p>
+  <p>Phone number: <%= @restaurant.phone_number %></p>
+  <p>Category: <%= @restaurant.category %></p>
+</div>
+
+<div class="mt-3">
+  <div class="btn btn-light">
+    <%= link_to "Submit a review", new_restaurant_review_path(@restaurant) %>
+  </div>
+  <div class="btn btn-light">
+    <%= link_to "Create restaurant", new_restaurant_path %>
+  </div>
+  <br>
+  <div class="btn btn-light">
+    <%= link_to "Show restaurants", restaurants_path %>
+  </div>
+</div>

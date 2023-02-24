@@ -1,6 +1,7 @@
 class Review < ApplicationRecord
+  RATINGS = %w[0 1 2 3 4 5]
   belongs_to :restaurant
   validates :content, :rating, presence: true
-  validates :rating, numericality: { greater_than_or_equal_to: 0 }, comparison: { less_than_or_equal_to: 5 }
+  validates :category, inclusion: { in: RATINGS }
   validates :rating, numericality: { only_integer: true }
 end
